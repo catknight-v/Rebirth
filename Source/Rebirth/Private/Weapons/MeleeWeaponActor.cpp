@@ -36,6 +36,8 @@ void AMeleeWeaponActor::BeginPlay()
 	OnActorEndOverlap.AddDynamic(this,&AMeleeWeaponActor::ActorEndOverlapped);
 
 	//OnActorBeginOverlap
+	//AVolume;
+	
 }
 
 void AMeleeWeaponActor::BeginWeaponAttack(FGameplayTag EventTag)
@@ -43,6 +45,10 @@ void AMeleeWeaponActor::BeginWeaponAttack(FGameplayTag EventTag)
 	bAttacking = true;
 	AttackEventTag = EventTag;
 	CapsuleCollision->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+
+	//CapsuleCollision->SetCollisionResponseToAllChannels(ECR_Overlap);
+	//CapsuleCollision->SetCollisionResponseToChannel(ECollisionChannel::)
+	
 }
 
 void AMeleeWeaponActor::EndWeaponAttack()

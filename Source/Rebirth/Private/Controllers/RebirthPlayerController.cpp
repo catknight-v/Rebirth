@@ -23,6 +23,7 @@ void ARebirthPlayerController::BeginPlay()
 	CurrentMode = EGameModeType::Free;
 	bUsingAnimaTargetActor = false;
 	/*GetRootComponent()->SetupAttachment(GetCharacter()->GetRootComponent());*/
+	//SpawnPlayerCameraManager
 }
 
 void ARebirthPlayerController::SetupInputComponent()
@@ -39,6 +40,19 @@ void ARebirthPlayerController::SetupInputComponent()
 
 	InputComponent->BindAction("SearchTarget", IE_Pressed, this, &ARebirthPlayerController::SearchTarget);
 	InputComponent->BindAxis("SearchTargetX", this, &ARebirthPlayerController::SearchTargetX);
+	//AActor::EnableInput()
+	//InputComponent->set
+	//Possess()
+	//PushInputComponent();
+	//USceneComponent::SetupAttachment();
+	//USceneComponent::OnAttachMentChanged;
+	//USceneComponent::ModifiedAttachChildren();
+	//USceneComponent::UpdateComponentToWorld();
+	//USceneComponent::SetRelativeLocationAndRotation();
+	UCameraComponent;
+	AActor::CalcCamera;
+	USceneComponent::SetRelativeTransform;
+	//USceneComponent::SetRelativeLocationAndRotation;
 }
 
 void ARebirthPlayerController::Tick(float DeltaTime)
@@ -69,6 +83,8 @@ void ARebirthPlayerController::QuitAnimView()
 {
 	bUsingAnimaTargetActor = false;
 	SetViewTargetWithBlend(ViewTargetActor, 1.f);
+
+	//APlayerCameraManager::AddPo
 }
 
 AActor* ARebirthPlayerController::GetTarget()

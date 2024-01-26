@@ -49,6 +49,8 @@ int32 UDialogueUserWidget::NextDialogue()
 		}
 	}
 	return CurrentDialogueIndex;
+
+	//ContentTextBlock->SetFont
 }
 
 void UDialogueUserWidget::EndDialogue()

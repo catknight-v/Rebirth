@@ -55,7 +55,7 @@ TArray<FActiveGameplayEffectHandle> URebirthGameplayAbility::ApplyEffectContaine
 		//实际实施GE
 		AllEffects.Append(K2_ApplyGameplayEffectSpecToTarget(SpecHandle, ContainerSpec.TargetData));
 	}
-
+	//ApplyGameplayEffectToTarget()
 	return AllEffects;
 }
 

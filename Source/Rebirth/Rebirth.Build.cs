@@ -17,8 +17,9 @@ public class Rebirth : ModuleRules
 			}
 		);
 
-		PublicDependencyModuleNames.AddRange(
+		PrivateDependencyModuleNames.AddRange(
 			new string[] {
+				//"UnLua",
 				"HeadMountedDisplay",
 				"Slate",
 				"SlateCore",

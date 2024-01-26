@@ -28,6 +28,9 @@ ARebirthCombatCharacterBase::ARebirthCombatCharacterBase()
 	bActionable = true;
 	bDead = false;
 	//GetCharacterMovement()->DisableMovement
+	//FCoreUObjectModule
+	//SetOwner()
+	//SetInstigator()
 }
 
 UAbilitySystemComponent* ARebirthCombatCharacterBase::GetAbilitySystemComponent() const
